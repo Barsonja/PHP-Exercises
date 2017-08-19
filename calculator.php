@@ -5,10 +5,21 @@ class Calculator
 	public $number1;
 	public $number2;
 
+	public function __construct($number1, $number2)
+	{
+		$this->number1 = $number1;
+		$this->number2 = $number2;
+	}
+
 
 	public function add($number1, $number2)
 	{
 		return $number1 + $number2;
+	}
+
+	public function subtract($number1, $number2)
+	{
+		return $number1 - $number2;
 	}
 
 	public function multiply($number1, $number2)
@@ -16,13 +27,9 @@ class Calculator
 		return $number1 * $number2;
 	}
 
-	public function exponent($number1, $number2)
+	public function divide($number1, $number2)
 	{
-		$result = 1;
-		for ($i = 1; $i <= $number2; $i++) {
-			$result *= $number1;
-		}
-		return $result;
+		return $number1 / $number2;
 	}
 
 	public function power($number1, $number2)
@@ -41,11 +48,5 @@ class Calculator
 	}
 }
 
-$c = new Calculator();
-echo $c->add(2,5).'<br>';
-echo $c->multiply(14,5).'<br>';
-echo $c->exponent(2,6).'<br>';
-echo $c->power(2,6).'<br>';
-echo $c->factorial(6).'<br>';
 
 ?>
