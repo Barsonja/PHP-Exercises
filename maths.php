@@ -51,5 +51,5 @@ if (isset($_GET['form_submit'])) {
 </form>
 
 <?php if ($message != null) {
-	echo "<p> Query result: " . $message;
+	echo "<p> Query result: " . $message . "</p>";
 	} ?>
