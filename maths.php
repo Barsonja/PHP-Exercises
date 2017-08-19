@@ -1,12 +1,12 @@
 <?php
 require_once "calculator.php";
 
+$message = null;
 if (isset($_GET['form_submit'])) {
 	$var1 = $_GET['var1'][0];
 	$var2 = $_GET['var2'][0];
 	$operation = (!empty($_GET['operation'][0]) ? $_GET['operation'][0] : null);
 	$result;
-	$message = "";
 	$calc = new Calculator($var1, $var2);
 
 	switch ($operation) {
@@ -50,4 +50,6 @@ if (isset($_GET['form_submit'])) {
 	<input type="submit" name="form_submit" value="Submit"/>
 </form>
 
-<p>Query result: <?php echo $message ?></p>
+<?php if ($message != null) {
+	"<p>Query result: "; echo $message;
+	} ?>
