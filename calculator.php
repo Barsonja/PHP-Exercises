@@ -12,29 +12,33 @@ class Calculator
 	}
 
 
-	public function add($number1, $number2)
+	public function add()
 	{
-		return $number1 + $number2;
+		return $this->number1 + $this->number2;
 	}
 
-	public function subtract($number1, $number2)
+	public function subtract()
 	{
-		return $number1 - $number2;
+		return $this->number1 - $this->number2;
 	}
 
-	public function multiply($number1, $number2)
+	public function multiply()
 	{
-		return $number1 * $number2;
+		return $this->number1 * $this->number2;
 	}
 
-	public function divide($number1, $number2)
+	public function divide()
 	{
-		return $number1 / $number2;
+		if ($this->number2 == 0) {
+			return "Undefined Error: Can't divide by 0.";
+		} else {
+			return $this->number1 / $this->number2;
+		}
 	}
 
-	public function power($number1, $number2)
+	public function power()
 	{
-		return $number1 ** $number2;
+		return $this->number1 ** $this->number2;
 	}
 
 	public function factorial($number)

@@ -10,11 +10,11 @@ if (isset($_GET['form_submit'])) {
 	$calc = new Calculator($var1, $var2);
 
 	switch ($operation) {
-		case 'add': $result  = $calc->add($var1, $var2);break;
-		case 'subtract': $result = $calc->subtract($var1, $var2);break;
-		case 'multiply': $result = $calc->multiply($var1, $var2);break;
-		case 'divide': $result = $calc->divide($var1, $var2);break;
-		case 'power': $result = $calc->power($var1, $var2);break;
+		case 'add': $result  = $calc->add();break;
+		case 'subtract': $result = $calc->subtract();break;
+		case 'multiply': $result = $calc->multiply();break;
+		case 'divide': $result = $calc->divide();break;
+		case 'power': $result = $calc->power();break;
 		case 'factorial': $result = $calc->factorial($var1);break;
 		default: echo("Error!"); exit(); break;
 	}
